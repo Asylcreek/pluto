@@ -1,10 +1,12 @@
-<script>
+<script lang="ts">
 	let className = '';
+
+	export let block: boolean = false;
 
 	export { className as class };
 </script>
 
-<button class={className}>
+<button class={className} class:block>
 	<slot />
 </button>
 
@@ -24,5 +26,11 @@
 		box-shadow: 0px 4px 24px -1px rgba(255, 255, 255, 0.25);
 		backdrop-filter: blur(30px);
 		color: white;
+		font-size: 2rem;
+		font-weight: 500;
+	}
+
+	button.block {
+		width: 100%;
 	}
 </style>

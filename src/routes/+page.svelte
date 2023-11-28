@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Img from '@zerodevx/svelte-img';
 
+	import '../styles/form.css';
+
 	import Button from '$lib/components/button.svelte';
 
 	import removeImgBgOnLoad from '$lib/utils/removeImgBgOnLoad';
@@ -8,6 +10,8 @@
 	import hero1 from '$lib/assets/images/hero.jpeg?as=run';
 	import astronaut1 from '$lib/assets/images/astronaut-1.png?as=run';
 	import astronaut2 from '$lib/assets/images/astronaut-2.png?as=run';
+	import star from '$lib/assets/images/star.png?as=run';
+	import astronauts from '$lib/assets/images/astronauts.png?as=run';
 </script>
 
 <svelte:head>
@@ -50,6 +54,55 @@
 
 	<div class="astronaut-2-container">
 		<Img src={astronaut2} alt="" class="astronaut-2" on:load={removeImgBgOnLoad} />
+	</div>
+</section>
+
+<section class="mailing-list-section">
+	<Img src={star} class="ml-star ml-star-1" alt="" on:load={removeImgBgOnLoad} />
+	<Img src={star} class="ml-star ml-star-2" alt="" on:load={removeImgBgOnLoad} />
+	<Img src={star} class="ml-star ml-star-3" alt="" on:load={removeImgBgOnLoad} />
+	<Img src={star} class="ml-star ml-star-4" alt="" on:load={removeImgBgOnLoad} />
+	<Img src={astronauts} class="ml-astronauts" alt="" on:load={removeImgBgOnLoad} />
+	<Img src={astronaut2} class="ml-astronaut-2" alt="" on:load={removeImgBgOnLoad} />
+
+	<div>
+		<h2 style="text-align:center;" class="hero-section-heading">Join our mailing list</h2>
+
+		<p class="hero-section-text mailing-list-section-subheading">
+			Sign-up for priority access to ticket releases and be the first to hear line-up and activity
+			announcements.
+		</p>
+
+		<form class="mailing-list-form">
+			<div class="input-container">
+				<label for="name">Name*</label>
+
+				<input type="text" name="name" id="name" />
+			</div>
+
+			<div class="input-container">
+				<label for="email">Email*</label>
+
+				<input type="email" name="email" id="email" />
+			</div>
+
+			<div class="input-container">
+				<label for="phone">Phone*</label>
+
+				<input type="tel" name="phone" id="phone" />
+			</div>
+
+			<div class="input-container row mailing-list-consent">
+				<input type="checkbox" name="consent" id="consent" />
+
+				<label for="consent"
+					>By ticking this box I agree to receive marketing material for Big Rumble and associated
+					events
+				</label>
+			</div>
+
+			<Button block>Join The List</Button>
+		</form>
 	</div>
 </section>
 
@@ -158,5 +211,90 @@
 		& img {
 			width: 100%;
 		}
+	}
+
+	/* mailing-list section*/
+	.mailing-list-section {
+		position: relative;
+		isolation: isolate;
+		padding: 8.7rem calc(var(--extra-width) / 2) 14.7rem;
+		color: var(--color-white);
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(85, 14, 133, 0.69) 0%, rgba(73, 19, 187, 0.57) 100%);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+		& img {
+			&.ml-star,
+			&.ml-astronauts,
+			&.ml-astronaut-2 {
+				position: absolute;
+			}
+
+			&.ml-star {
+				width: 14.6rem;
+				height: 14.6rem;
+				z-index: -1;
+			}
+
+			&.ml-star-1 {
+				top: 14.8rem;
+				left: 7.4rem;
+			}
+
+			&.ml-star-2 {
+				top: 7.5rem;
+				left: 47%;
+				transform: translateX(-50%);
+			}
+
+			&.ml-star-3 {
+				top: 23.1rem;
+				right: 37.6rem;
+			}
+
+			&.ml-star-4 {
+				top: 1.2rem;
+				right: 1.4rem;
+			}
+
+			&.ml-astronauts {
+				z-index: -2;
+				width: 49.8rem;
+				bottom: 0;
+				left: 0;
+			}
+
+			&.ml-astronaut-2 {
+				width: 19rem;
+				bottom: -14.6rem;
+				right: 8.7rem;
+				z-index: 1;
+			}
+		}
+	}
+
+	.mailing-list-section-subheading {
+		text-align: center;
+		margin-bottom: 4.3rem;
+	}
+
+	.mailing-list-form {
+		width: 100%;
+		max-width: 54.2rem;
+		margin: 0 auto;
+	}
+
+	.input-container.mailing-list-consent {
+		margin-top: 0.8rem;
+		margin-bottom: 4rem;
 	}
 </style>
