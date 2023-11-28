@@ -1,7 +1,12 @@
 <script>
 	import { page } from '$app/stores';
+	import Img from '@zerodevx/svelte-img';
 
 	import routes from '$lib/helpers/routes';
+
+	import removeImgBgOnLoad from '$lib/utils/removeImgBgOnLoad';
+
+	import logo from '$lib/assets/images/logo.png?as=run';
 
 	const navItems = [
 		{ href: routes.home(), title: 'Home' },
@@ -12,10 +17,10 @@
 	];
 </script>
 
-<header>
+<header class="header">
 	<div>
 		<a href={routes.home()} class="logo-container">
-			<img src="/images/logo.png" alt="Pluto logo" />
+			<Img src={logo} alt="Pluto logo" on:load={removeImgBgOnLoad} loading="eager" />
 		</a>
 
 		<nav>
@@ -37,13 +42,17 @@
 </header>
 
 <style>
-	header {
+	.header {
 		width: 100%;
 		background: linear-gradient(160deg, #4b5563 5.08%, rgba(255, 255, 255, 0.1) 105.52%);
 		box-shadow: 0px 4px 2.4rem -1px rgba(255, 255, 255, 0.25);
 		backdrop-filter: blur(3rem);
 		padding: 2rem 1rem;
 		color: var(--color-white);
+		position: sticky;
+		top: 0;
+		left: 0;
+		z-index: 1;
 	}
 
 	header > div {

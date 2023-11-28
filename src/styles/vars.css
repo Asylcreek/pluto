@@ -1,6 +1,8 @@
 :root {
 	--color-white: #fff;
 	--color-site: #7241b4;
+	--color-site-a: #e6d7ff;
 
 	--max-width: 112rem;
+	--extra-width: calc(100% - var(--max-width));
 }
