@@ -12,6 +12,11 @@
 	import astronaut2 from '$lib/assets/images/astronaut-2.png?as=run';
 	import star from '$lib/assets/images/star.png?as=run';
 	import astronauts from '$lib/assets/images/astronauts.png?as=run';
+	import sponsoredByBg from '$lib/assets/images/sponsored-by-bg.png?as=run';
+	import nairabox from '$lib/assets/images/nairabox.png?as=run';
+	import nike from '$lib/assets/images/nike.png?as=run';
+	import interswitch from '$lib/assets/images/interswitch.png?as=run';
+	import hennessy from '$lib/assets/images/hennessy.png?as=run';
 </script>
 
 <svelte:head>
@@ -104,6 +109,58 @@
 			<Button block>Join The List</Button>
 		</form>
 	</div>
+</section>
+
+<section class="sponsored-by-section">
+	<Img src={sponsoredByBg} alt="" class="sponsored-by-bg" />
+
+	<h2 class="hero-section-heading sponsored-by-section-heading">Sponsored by</h2>
+
+	<div class="sponsored-logos">
+		<div class="sponsored-logo">
+			<Img src={nairabox} alt="nairabox" class="nairabox" on:load={removeImgBgOnLoad} />
+		</div>
+
+		<div class="sponsored-logo">
+			<Img src={nike} alt="nike" class="nike" on:load={removeImgBgOnLoad} />
+		</div>
+
+		<div class="sponsored-logo">
+			<Img src={interswitch} alt="interswitch" class="interswitch" on:load={removeImgBgOnLoad} />
+		</div>
+
+		<div class="sponsored-logo">
+			<Img src={hennessy} alt="hennessy" class="hennessy" on:load={removeImgBgOnLoad} />
+		</div>
+	</div>
+
+	<section class="sponsored-by-section-1">
+		<div></div>
+
+		<div>
+			<h3 class="hero-section-heading">An out of the world experience</h3>
+
+			<p class="hero-section-text">
+				The Pluto Experience brings to you a blend of music and family life mix with Gen Z like
+				never before.<br /> Come see the battle of the stars as we take you to the moon.
+			</p>
+		</div>
+	</section>
+
+	<p class="pluto-experience">Pluto experience</p>
+
+	<section class="sponsored-by-section-2">
+		<div>
+			<h3 class="hero-section-heading">Get the full experience</h3>
+
+			<p class="hero-section-text">
+				The Pluto Experience brings to you a blend of music and family life mix with Gen Z like
+				never before.<br /> Come see the battle of the stars as we take you to the moon.
+			</p>
+		</div>
+
+		<div></div>
+	</section>
 </section>
 
 <style>
@@ -296,5 +353,106 @@
 	.input-container.mailing-list-consent {
 		margin-top: 0.8rem;
 		margin-bottom: 4rem;
+	}
+
+	/* sponsored-by section */
+	.sponsored-by-section {
+		padding: 6.5rem calc(var(--extra-width) / 2) 15rem;
+		position: relative;
+		isolation: isolate;
+		color: var(--color-white);
+		overflow: hidden;
+	}
+
+	.sponsored-by-section-heading {
+		margin-bottom: 2.4rem;
+		text-align: center;
+	}
+
+	:global(.sponsored-by-bg) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -2;
+	}
+
+	.sponsored-logos {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.sponsored-logo {
+		& img {
+			object-fit: cover;
+
+			&.nairabox {
+				width: 29rem;
+			}
+
+			&.nike {
+				width: 14.7rem;
+			}
+
+			&.interswitch {
+				width: 25.6rem;
+			}
+
+			&.hennessy {
+				width: 17.4rem;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 4rem;
+		}
+	}
+
+	.sponsored-by-section-1 {
+		display: flex;
+		align-items: center;
+		gap: 10.8rem;
+		margin-top: 13.1rem;
+
+		& > div:last-child {
+			margin-left: auto;
+			max-width: 58.1rem;
+
+			& .hero-section-heading {
+				font-size: 3.2rem;
+			}
+		}
+	}
+
+	.sponsored-by-section-2 {
+		display: flex;
+		align-items: center;
+		gap: 8.2rem;
+		margin-top: 13.1rem;
+
+		& > div:first-child {
+			max-width: 58.1rem;
+
+			& .hero-section-heading {
+				font-size: 3.2rem;
+			}
+		}
+	}
+
+	.pluto-experience {
+		font-size: 20rem;
+		font-weight: 900;
+		letter-spacing: 0.8rem;
+		text-align: center;
+		color: rgba(85, 14, 133, 0.8);
+		text-transform: uppercase;
+		white-space: nowrap;
+		-webkit-text-stroke: 1px solid var(--color-white);
+		position: absolute;
+		bottom: 23rem;
+		left: 50%;
+		transform: translateX(-50%);
+		pointer-events: none;
+		z-index: -1;
 	}
 </style>
