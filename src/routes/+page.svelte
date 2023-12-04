@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
+	import { browser } from '$app/environment';
 	import Img from '@zerodevx/svelte-img';
 
 	import '$lib/styles/form.css';
@@ -28,6 +29,8 @@
 	});
 
 	onDestroy(() => {
+		if (!browser) return;
+
 		const header = document.querySelector('.header');
 
 		if (header) {
