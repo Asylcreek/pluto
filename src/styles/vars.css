@@ -3,6 +3,7 @@
 	--color-site: #7241b4;
 	--color-site-a: #e6d7ff;
 	--color-site-b: #411b67;
+	--color-site-c: #e1e1e1;
 
 	--max-width: 112rem;
 	--extra-width: calc(100% - var(--max-width));

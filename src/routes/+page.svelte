@@ -380,6 +380,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		gap: 4rem;
 	}
 
 	.sponsored-logo {
@@ -401,10 +402,6 @@
 			&.hennessy {
 				width: 17.4rem;
 			}
-		}
-
-		&:not(:last-child) {
-			margin-right: 4rem;
 		}
 	}
 
