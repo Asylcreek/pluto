@@ -29,6 +29,7 @@ img {
 	background-repeat: no-repeat;
 	background-size: cover;
 	shape-margin: 1.2rem;
+	pointer-events: none;
 }
 
 li {

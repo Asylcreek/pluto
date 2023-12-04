@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onDestroy, onMount } from 'svelte';
 	import Img from '@zerodevx/svelte-img';
 
 	import '../styles/form.css';
@@ -17,6 +18,22 @@
 	import nike from '$lib/assets/images/nike.png?as=run';
 	import interswitch from '$lib/assets/images/interswitch.png?as=run';
 	import hennessy from '$lib/assets/images/hennessy.png?as=run';
+
+	onMount(() => {
+		const header = document.querySelector('.header');
+
+		if (header) {
+			(header as HTMLElement).style.position = 'fixed';
+		}
+	});
+
+	onDestroy(() => {
+		const header = document.querySelector('.header');
+
+		if (header) {
+			(header as HTMLElement).style.position = '';
+		}
+	});
 </script>
 
 <svelte:head>
@@ -165,14 +182,6 @@
 
 <style>
 	/* Hero section */
-	/*
-  `global` and `important` are used like this to prevent
-  any JS gymnastics to make the header fixed only on the homepage
-  */
-	:global(.header) {
-		position: fixed !important;
-	}
-
 	.hero-section {
 		width: 100%;
 		height: 174.6rem;
