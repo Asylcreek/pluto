@@ -11,7 +11,7 @@
 	const navItems = [
 		{ href: routes.home(), title: 'Home' },
 		{ href: '/#', title: 'About' },
-		{ href: '/#', title: 'FAQs' },
+		{ href: routes.faqs(), title: 'FAQs' },
 		{ href: '/#', title: 'Map' },
 		{ href: routes.contactUs(), title: 'Contact' }
 	];

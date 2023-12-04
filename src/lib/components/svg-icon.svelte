@@ -1,10 +1,11 @@
 <script lang="ts">
-	type IconName = 'twitter' | 'facebook' | 'instagram';
+	type IconName = 'twitter' | 'facebook' | 'instagram' | 'add-circle';
 
 	export let iconName: IconName;
+	export let big = false;
 </script>
 
-<svg>
+<svg class:big>
 	<use xlink:href={`/sprite.svg#icon-${iconName}`}></use>
 </svg>
 
@@ -13,5 +14,10 @@
 		width: 1.6rem;
 		height: 1.6rem;
 		fill: var(--color-white);
+	}
+
+	svg.big {
+		width: 2.4rem;
+		height: 2.4rem;
 	}
 </style>
