@@ -1,7 +1,10 @@
 const home = () => '/';
 
+const contactUs = () => '/contact-us';
+
 const routes = {
-  home
+  home,
+  contactUs
 };
 
 export default routes;

@@ -2,7 +2,7 @@
 	import { onDestroy, onMount } from 'svelte';
 	import Img from '@zerodevx/svelte-img';
 
-	import '../styles/form.css';
+	import '$lib/styles/form.css';
 
 	import Button from '$lib/components/button.svelte';
 

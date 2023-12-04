@@ -13,7 +13,7 @@
 		{ href: '/#', title: 'About' },
 		{ href: '/#', title: 'FAQs' },
 		{ href: '/#', title: 'Map' },
-		{ href: '/#', title: 'Contact' }
+		{ href: routes.contactUs(), title: 'Contact' }
 	];
 </script>
 

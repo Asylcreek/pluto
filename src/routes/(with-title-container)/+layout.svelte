@@ -83,6 +83,7 @@
 		padding: 5rem calc(var(--extra-width) / 2) 10rem;
 		position: relative;
 		isolation: isolate;
+		color: var(--color-white);
 
 		&::after {
 			content: '';

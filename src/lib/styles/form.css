@@ -11,7 +11,8 @@
 	text-transform: capitalize;
 }
 
-.input-container > input {
+.input-container > input,
+.input-container > textarea {
 	width: 100%;
 	border: none;
 	border-bottom: 1px solid var(--color-site-b);
@@ -46,6 +47,11 @@
 	position: absolute;
 	top: 0.5px;
 	left: 4.5px;
+}
+
+.input-container > textarea {
+	resize: none;
+	height: 16.7rem;
 }
 
 .input-container.row {
