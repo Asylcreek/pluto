@@ -6,11 +6,14 @@ const faqs = () => '/faqs';
 
 const tickets = () => '/tickets';
 
+const about = () => '/about';
+
 const routes = {
   home,
   contactUs,
   faqs,
-  tickets
+  tickets,
+  about
 };
 
 export default routes;

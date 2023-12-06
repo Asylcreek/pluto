@@ -10,7 +10,7 @@
 
 	const navItems = [
 		{ href: routes.home(), title: 'Home' },
-		{ href: '/#', title: 'About' },
+		{ href: routes.about(), title: 'About' },
 		{ href: routes.faqs(), title: 'FAQs' },
 		{ href: '/#', title: 'Map' },
 		{ href: routes.contactUs(), title: 'Contact' }
