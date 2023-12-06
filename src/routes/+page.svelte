@@ -374,6 +374,22 @@
 		isolation: isolate;
 		color: var(--color-white);
 		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: linear-gradient(
+				175deg,
+				rgba(57, 57, 57, 0.7) -6.08%,
+				rgba(0, 0, 0, 0) 35.16%,
+				#000 91.83%
+			);
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
 	}
 
 	.sponsored-by-section-heading {
@@ -453,10 +469,10 @@
 		font-weight: 900;
 		letter-spacing: 0.8rem;
 		text-align: center;
-		color: rgba(85, 14, 133, 0.8);
+		color: rgba(85, 14, 133, 0.05);
 		text-transform: uppercase;
 		white-space: nowrap;
-		-webkit-text-stroke: 1px solid var(--color-white);
+		-webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
 		position: absolute;
 		bottom: 23rem;
 		left: 50%;

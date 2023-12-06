@@ -165,6 +165,8 @@
 </section>
 
 <style>
+	/* hero section */
+
 	.hero-section {
 		--section1-height: 77rem;
 
@@ -344,6 +346,8 @@
 			}
 		}
 	}
+
+	/* team section */
 
 	.team-section {
 		position: relative;
