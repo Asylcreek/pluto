@@ -8,7 +8,7 @@
 	import sky from '$lib/assets/images/sky.png?as=run';
 	import hero1 from '$lib/assets/images/hero.jpeg?as=run';
 
-	const path = $page.url.pathname;
+	$: path = $page.url.pathname;
 
 	$: pageHeading = path.slice(1).replaceAll('-', ' ');
 </script>
