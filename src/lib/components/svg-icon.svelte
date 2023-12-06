@@ -1,5 +1,5 @@
 <script lang="ts">
-	type IconName = 'twitter' | 'facebook' | 'instagram' | 'add-circle';
+	type IconName = 'twitter' | 'facebook' | 'instagram' | 'add-circle' | 'location' | 'ticket';
 
 	export let iconName: IconName;
 	export let big = false;

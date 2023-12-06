@@ -4,10 +4,13 @@ const contactUs = () => '/contact-us';
 
 const faqs = () => '/faqs';
 
+const tickets = () => '/tickets';
+
 const routes = {
   home,
   contactUs,
-  faqs
+  faqs,
+  tickets
 };
 
 export default routes;

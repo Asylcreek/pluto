@@ -37,7 +37,7 @@
 			</ul>
 		</nav>
 
-		<button>Get tickets</button>
+		<a class="get-tickets-btn" href={routes.tickets()}>Get tickets</a>
 	</div>
 </header>
 
@@ -91,7 +91,7 @@
 		}
 	}
 
-	button {
+	.get-tickets-btn {
 		margin-left: 11.6rem;
 		border-radius: 2.4rem;
 		padding: 1rem 0.8rem;
@@ -100,5 +100,6 @@
 		width: 17.2rem;
 		color: inherit;
 		margin-left: auto;
+		text-align: center;
 	}
 </style>
