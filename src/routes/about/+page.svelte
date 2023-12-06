@@ -62,7 +62,7 @@
 
 		<div class="hero-section-2-flex">
 			<div>
-				<Img src={astronaut3} class="hs-star hs-star-1" alt="" on:load={removeImgBgOnLoad} />
+				<Img src={astronaut3} alt="" on:load={removeImgBgOnLoad} />
 			</div>
 
 			<div>
@@ -164,9 +164,8 @@
 	</div>
 </section>
 
-<style>
+<style lang="scss">
 	/* hero section */
-
 	.hero-section {
 		--section1-height: 77rem;
 
@@ -188,7 +187,7 @@
 			z-index: -1;
 		}
 
-		& > picture img {
+		& > :global(picture img) {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -240,7 +239,7 @@
 			transform: translateX(-50%);
 			overflow: hidden;
 
-			& img {
+			& :global(img) {
 				width: 39.9rem;
 				object-fit: cover;
 			}
@@ -258,39 +257,35 @@
 		position: relative;
 		isolation: isolate;
 
-		& > picture {
-			& img {
-				&.hs-star {
-					width: 14.6rem;
-					height: 14.6rem;
-					position: absolute;
-					z-index: -1;
-				}
+		:global(.hs-star) {
+			width: 14.6rem;
+			height: 14.6rem;
+			position: absolute;
+			z-index: -1;
+		}
 
-				&.hs-star-1 {
-					right: 1.4rem;
-					top: 4.3rem;
-				}
+		:global(.hs-star-1) {
+			right: 1.4rem;
+			top: 4.3rem;
+		}
 
-				&.hs-star-2 {
-					right: 50%;
-					top: 10.6rem;
-				}
+		:global(.hs-star-2) {
+			right: 50%;
+			top: 10.6rem;
+		}
 
-				&.hs-star-3 {
-					left: 7.4rem;
-					top: 17.9rem;
-				}
+		:global(.hs-star-3) {
+			left: 7.4rem;
+			top: 17.9rem;
+		}
 
-				&.hs-saucer-lg {
-					position: absolute;
-					width: 84.3rem;
-					left: 7.5rem;
-					top: 8.7rem;
-					object-fit: cover;
-					z-index: -1;
-				}
-			}
+		:global(.hs-saucer-lg) {
+			position: absolute;
+			width: 84.3rem;
+			left: 7.5rem;
+			top: 8.7rem;
+			object-fit: cover;
+			z-index: -1;
 		}
 	}
 
@@ -301,7 +296,7 @@
 		padding-top: 3.8rem;
 
 		& > div:first-of-type {
-			& img {
+			& :global(img) {
 				width: 50.7rem;
 				object-fit: cover;
 			}
@@ -355,7 +350,7 @@
 		isolation: isolate;
 		color: var(--color-white);
 
-		& > picture img {
+		& > :global(picture img) {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
@@ -412,7 +407,7 @@
 			border-top-left-radius: 1.6rem;
 			overflow: hidden;
 
-			& img {
+			& :global(img) {
 				width: 100%;
 				height: 29.7rem;
 				object-fit: cover;

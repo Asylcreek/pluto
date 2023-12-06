@@ -34,7 +34,7 @@
 	</div>
 </article>
 
-<style>
+<style lang="scss">
 	article {
 		background-color: var(--color-site-b);
 		border-radius: 1.2rem;
@@ -42,7 +42,7 @@
 	}
 
 	article > div:first-child {
-		& img {
+		& :global(img) {
 			width: 100%;
 			height: 22rem;
 			object-fit: cover;
@@ -70,7 +70,7 @@
 		display: flex;
 		align-items: center;
 
-		& > svg {
+		& > :global(svg) {
 			width: 2rem;
 			height: 2rem;
 			fill: var(--color-site-d);

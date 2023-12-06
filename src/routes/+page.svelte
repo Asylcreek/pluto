@@ -183,7 +183,7 @@
 	</section>
 </section>
 
-<style>
+<style lang="scss">
 	/* Hero section */
 	.hero-section {
 		width: 100%;
@@ -232,7 +232,7 @@
 		}
 
 		& > div:last-child {
-			& img {
+			& :global(img) {
 				width: 43.8rem;
 				object-fit: cover;
 			}
@@ -277,7 +277,7 @@
 		bottom: 0;
 		margin-left: calc(var(--extra-width) / 2);
 
-		& img {
+		& :global(img) {
 			width: 100%;
 		}
 	}
@@ -301,53 +301,52 @@
 			z-index: -1;
 		}
 
-		& img {
-			&.ml-star,
-			&.ml-astronauts,
-			&.ml-astronaut-2 {
-				position: absolute;
-			}
+		/*:global(.ml-star, .ml-astronauts, .ml-astronaut-2) {
+			position: absolute;
+		}*/
 
-			&.ml-star {
-				width: 14.6rem;
-				height: 14.6rem;
-				z-index: -1;
-			}
+		& :global(.ml-star) {
+			position: absolute;
+			width: 14.6rem;
+			height: 14.6rem;
+			z-index: -1;
+		}
 
-			&.ml-star-1 {
-				top: 14.8rem;
-				left: 7.4rem;
-			}
+		& :global(.ml-star-1) {
+			top: 14.8rem;
+			left: 7.4rem;
+		}
 
-			&.ml-star-2 {
-				top: 7.5rem;
-				left: 47%;
-				transform: translateX(-50%);
-			}
+		& :global(.ml-star-2) {
+			top: 7.5rem;
+			left: 47%;
+			transform: translateX(-50%);
+		}
 
-			&.ml-star-3 {
-				top: 23.1rem;
-				right: 37.6rem;
-			}
+		& :global(.ml-star-3) {
+			top: 23.1rem;
+			right: 37.6rem;
+		}
 
-			&.ml-star-4 {
-				top: 1.2rem;
-				right: 1.4rem;
-			}
+		& :global(.ml-star-4) {
+			top: 1.2rem;
+			right: 1.4rem;
+		}
 
-			&.ml-astronauts {
-				z-index: -2;
-				width: 49.8rem;
-				bottom: 0;
-				left: 0;
-			}
+		& :global(.ml-astronauts) {
+			position: absolute;
+			z-index: -2;
+			width: 49.8rem;
+			bottom: 0;
+			left: 0;
+		}
 
-			&.ml-astronaut-2 {
-				width: 19rem;
-				bottom: -14.6rem;
-				right: 8.7rem;
-				z-index: 1;
-			}
+		& :global(.ml-astronaut-2) {
+			position: absolute;
+			width: 19rem;
+			bottom: -14.6rem;
+			right: 8.7rem;
+			z-index: 1;
 		}
 	}
 
@@ -412,24 +411,24 @@
 	}
 
 	.sponsored-logo {
-		& img {
+		& :global(img) {
 			object-fit: cover;
+		}
 
-			&.nairabox {
-				width: 29rem;
-			}
+		& :global(.nairabox) {
+			width: 29rem;
+		}
 
-			&.nike {
-				width: 14.7rem;
-			}
+		& :global(.nike) {
+			width: 14.7rem;
+		}
 
-			&.interswitch {
-				width: 25.6rem;
-			}
+		& :global(.interswitch) {
+			width: 25.6rem;
+		}
 
-			&.hennessy {
-				width: 17.4rem;
-			}
+		& :global(.hennessy) {
+			width: 17.4rem;
 		}
 	}
 

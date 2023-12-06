@@ -41,7 +41,7 @@
 	</div>
 </header>
 
-<style>
+<style lang="scss">
 	.header {
 		width: 100%;
 		background: linear-gradient(160deg, #4b5563 5.08%, rgba(255, 255, 255, 0.1) 105.52%);

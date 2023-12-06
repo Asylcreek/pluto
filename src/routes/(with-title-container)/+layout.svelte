@@ -26,7 +26,7 @@
 	<slot />
 </section>
 
-<style>
+<style lang="scss">
 	.page-header-section {
 		height: 17.6rem;
 		position: relative;
@@ -55,26 +55,24 @@
 			z-index: -1;
 		}
 
-		& > picture {
-			& > .sky {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: -3;
-			}
+		& :global(picture .sky) {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -3;
+		}
 
-			& > .saucer {
-				width: 32.3rem;
-				object-fit: cover;
-				position: absolute;
-				top: 50%;
-				left: 12.5rem;
-				transform: translateY(-50%);
-				z-index: -2;
-			}
+		& :global(picture .saucer) {
+			width: 32.3rem;
+			object-fit: cover;
+			position: absolute;
+			top: 50%;
+			left: 12.5rem;
+			transform: translateY(-50%);
+			z-index: -2;
 		}
 	}
 
@@ -96,7 +94,7 @@
 			z-index: -1;
 		}
 
-		& > picture > img {
+		& > :global(picture > img) {
 			position: absolute;
 			top: 0;
 			left: 0;

@@ -60,7 +60,7 @@
 	</section>
 </footer>
 
-<style>
+<style lang="scss">
 	.logo-container {
 		width: 17.7rem;
 	}
@@ -109,7 +109,7 @@
 		align-items: center;
 		gap: 3.3rem;
 
-		& svg {
+		& :global(svg) {
 			width: 2.4rem;
 			height: 1.9rem;
 		}
