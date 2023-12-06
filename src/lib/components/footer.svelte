@@ -3,6 +3,8 @@
 
 	import SvgIcon from './svg-icon.svelte';
 
+	import routes from '$lib/helpers/routes';
+
 	import removeImgBgOnLoad from '$lib/utils/removeImgBgOnLoad';
 
 	import logo from '$lib/assets/images/logo.png?as=run';
@@ -20,7 +22,7 @@
 
 				<ul>
 					<li><a href="/#">Activities</a></li>
-					<li><a href="/#">About</a></li>
+					<li><a href={routes.about()}>About</a></li>
 					<li><a href="/#">Partnership</a></li>
 					<li><a href="/#">Privacy policy</a></li>
 				</ul>
@@ -30,7 +32,7 @@
 				<h2 id="services">Services</h2>
 
 				<ul>
-					<li><a href="/#">Get tickets</a></li>
+					<li><a href={routes.tickets()}>Get tickets</a></li>
 				</ul>
 			</nav>
 
@@ -38,8 +40,8 @@
 				<h2 id="support">Support</h2>
 
 				<ul>
-					<li><a href="/#">Contact us</a></li>
-					<li><a href="/#">FAQs</a></li>
+					<li><a href={routes.contactUs()}>Contact us</a></li>
+					<li><a href={routes.faqs()}>FAQs</a></li>
 				</ul>
 			</nav>
 		</div>
