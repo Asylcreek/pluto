@@ -49,11 +49,12 @@
 
 	<section class="hero-section-1">
 		<div>
-			<h1 class="hero-section-heading">Africa's first big month long event</h1>
+			<h1 class="hero-section-heading">Africa's first, <span>biggest month long event</span></h1>
 
 			<p class="hero-section-text">
-				The Pluto Experience brings to you a blend of music and family life mix with Gen Z like
-				never before.<br /> Come see the battle of the stars as we take you to the moon
+				The Pluto Experience is the first African month long event.<br /> Pluto brings to everyone exciting
+				activities from the casino to the water; flyboarding, Zorbing, towable tubes, food fest and more.
+				Even the kids and families are not left out, Pluto has something for everyone
 			</p>
 
 			<Button class="hero-section-button">Book a Ticket</Button>
@@ -69,8 +70,10 @@
 			<h2 class="hero-section-heading">An out of the world experience</h2>
 
 			<p class="hero-section-text">
-				The Pluto Experience brings to you a blend of music and family life mix with Gen Z like
-				never before.<br /> Come see the battle of the stars as we take you to the moon.
+				We have one of the best venues in the heart of Lagos to achieve this experience! Landmark
+				beach is for lovers of breathtaking views & the glistening sea<br /> Landmark and Pluto is home
+				to amazing Restaurants, nightlife, stunning hotels and villas, and more, there’s really something
+				for everyone
 			</p>
 
 			<Button class="hero-section-button">Book a Ticket</Button>
@@ -158,11 +161,12 @@
 		<div></div>
 
 		<div>
-			<h3 class="hero-section-heading">An out of the world experience</h3>
+			<h3 class="hero-section-heading">What to expect from the fest</h3>
 
 			<p class="hero-section-text">
-				The Pluto Experience brings to you a blend of music and family life mix with Gen Z like
-				never before.<br /> Come see the battle of the stars as we take you to the moon.
+				The main festival site sits on the beach with 3 Villages and 2 major stages, as well as
+				exclusive areas for VIP and VVIP ticket holders which includes a stunning private cabana
+				with the best vibes for some pre-show fun, #Plutobaddies & #Plutodaddies. Lets go!!
 			</p>
 		</div>
 	</section>
@@ -244,6 +248,10 @@
 		font-weight: 700;
 		font-size: 4rem;
 		margin-bottom: 0.8rem;
+
+		& > span {
+			color: var(--color-site-a);
+		}
 	}
 
 	.hero-section-text {
