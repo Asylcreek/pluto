@@ -17,8 +17,8 @@
 		</div>
 
 		<div class="links">
-			<nav class="nav" aria-labelledby="plutoexperience.com">
-				<h2 id="plutoexperience.com">Plutoexperience.com</h2>
+			<nav class="nav" aria-labelledby="theplutox.com">
+				<h2 id="theplutox.com">theplutox.com</h2>
 
 				<ul>
 					<li><a href="/#">Activities</a></li>
@@ -56,7 +56,7 @@
 	</section>
 
 	<section class="copyright-section">
-		<p>&copy; {new Date().getFullYear()} plutoexperience.com. All rights reserved</p>
+		<p>&copy; {new Date().getFullYear()} theplutox.com. All rights reserved</p>
 	</section>
 </footer>
 
