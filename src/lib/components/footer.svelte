@@ -62,29 +62,56 @@
 
 <style lang="scss">
 	.logo-container {
-		width: 17.7rem;
+		width: 14rem;
+		max-width: 100%;
+		flex-shrink: 0;
+
+		@media only screen and (min-width: 31.25em) {
+			width: 17.7rem;
+		}
 	}
 
 	footer {
 		background: linear-gradient(180deg, #550e85 0%, rgba(73, 19, 187, 0.78) 100%);
-		padding: 5.8rem 13rem 3.7rem;
-		padding-right: 6.8rem;
+		padding: 5.8rem 2rem 3.7rem;
 		color: var(--color-white);
+
+		@media only screen and (min-width: 71.875em) {
+			padding: 5.8rem 13rem 3.7rem;
+			padding-right: 6.8rem;
+		}
 	}
 
 	.links-section {
 		display: flex;
+		flex-direction: column;
 		align-items: flex-start;
-		justify-content: center;
-		gap: 17.3rem;
+		justify-content: space-between;
+		row-gap: 5rem;
+
+		@media only screen and (min-width: 53.125em) {
+			flex-direction: row;
+			gap: 2rem;
+		}
+
+		@media only screen and (min-width: 90.625em) {
+			justify-content: center;
+			gap: 17.3rem;
+		}
 	}
 
 	.links {
 		display: flex;
+		flex-direction: column;
+		row-gap: 5rem;
 		align-items: flex-start;
 		justify-content: space-between;
 		max-width: 59.2rem;
 		width: 100%;
+
+		@media only screen and (min-width: 31.25em) {
+			flex-direction: row;
+		}
 	}
 
 	.nav {
