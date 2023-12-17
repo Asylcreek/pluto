@@ -91,7 +91,6 @@
 	<Img src={star} class="ml-star ml-star-3" alt="" on:load={removeImgBgOnLoad} />
 	<Img src={star} class="ml-star ml-star-4" alt="" on:load={removeImgBgOnLoad} />
 	<Img src={astronauts} class="ml-astronauts" alt="" on:load={removeImgBgOnLoad} />
-	<Img src={astronaut2} class="ml-astronaut-2" alt="" on:load={removeImgBgOnLoad} />
 
 	<div>
 		<h2 style="text-align:center;" class="hero-section-heading">Join our mailing list</h2>
@@ -132,6 +131,8 @@
 			<Button block>Join The List</Button>
 		</form>
 	</div>
+
+	<Img src={astronaut2} class="ml-astronaut-2" alt="" on:load={removeImgBgOnLoad} />
 </section>
 
 <section class="sponsored-by-section">
@@ -380,9 +381,17 @@
 	.mailing-list-section {
 		position: relative;
 		isolation: isolate;
-		padding: 8.7rem calc(var(--extra-width) / 2) 14.7rem;
+		padding: 2.3rem 2.4rem 14.7rem;
 		color: var(--color-white);
 		overflow: hidden;
+
+		@media only screen and (min-width: 37.5em) {
+			padding: 8.7rem calc(var(--extra-width) / 2) 14.7rem;
+		}
+
+		@media only screen and (max-width: 56.25em) {
+			padding-bottom: 0;
+		}
 
 		&::before {
 			content: '';
@@ -395,20 +404,30 @@
 			z-index: -1;
 		}
 
-		/*:global(.ml-star, .ml-astronauts, .ml-astronaut-2) {
-			position: absolute;
-		}*/
-
 		& :global(.ml-star) {
 			position: absolute;
 			width: 14.6rem;
 			height: 14.6rem;
 			z-index: -1;
+
+			@media only screen and (max-width: 46.875em) {
+				display: none;
+			}
 		}
 
 		& :global(.ml-star-1) {
 			top: 14.8rem;
 			left: 7.4rem;
+
+			@media only screen and (max-width: 46.875em) {
+				display: block;
+				bottom: 3rem;
+				top: initial;
+			}
+
+			@media only screen and (max-width: 31.25em) {
+				left: 4rem;
+			}
 		}
 
 		& :global(.ml-star-2) {
@@ -425,6 +444,10 @@
 		& :global(.ml-star-4) {
 			top: 1.2rem;
 			right: 1.4rem;
+
+			@media only screen and (max-width: 46.875em) {
+				display: block;
+			}
 		}
 
 		& :global(.ml-astronauts) {
@@ -433,14 +456,29 @@
 			width: 49.8rem;
 			bottom: 0;
 			left: 0;
+
+			@media only screen and (max-width: 46.875em) {
+				display: none;
+			}
 		}
 
 		& :global(.ml-astronaut-2) {
-			position: absolute;
+			position: relative;
 			width: 19rem;
-			bottom: -14.6rem;
-			right: 8.7rem;
+			bottom: -16rem;
+			right: 0;
 			z-index: 1;
+			display: block;
+			margin-left: auto;
+
+			@media only screen and (min-width: 56.25em) {
+				bottom: -14.6rem;
+				position: absolute;
+			}
+
+			@media only screen and (min-width: 65.625em) {
+				right: 8.7rem;
+			}
 		}
 	}
 
@@ -453,6 +491,12 @@
 		width: 100%;
 		max-width: 54.2rem;
 		margin: 0 auto;
+
+		& > :global(button) {
+			@media only screen and (max-width: 31.25em) {
+				font-size: 1.6rem;
+			}
+		}
 	}
 
 	.input-container.mailing-list-consent {
