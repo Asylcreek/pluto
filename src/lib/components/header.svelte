@@ -12,7 +12,7 @@
 		{ href: routes.home(), title: 'Home' },
 		{ href: routes.about(), title: 'About' },
 		{ href: routes.faqs(), title: 'FAQs' },
-		{ href: '/#', title: 'Map' },
+		// { href: '/#', title: 'Map' },
 		{ href: routes.contactUs(), title: 'Contact' }
 	];
 </script>
@@ -47,12 +47,17 @@
 		background: linear-gradient(160deg, #4b5563 5.08%, rgba(255, 255, 255, 0.1) 105.52%);
 		box-shadow: 0px 4px 2.4rem -1px rgba(255, 255, 255, 0.25);
 		backdrop-filter: blur(3rem);
-		padding: 2rem 1rem;
+		padding: 1.1rem 2.1rem;
+		padding-right: 1.4rem;
 		color: var(--color-white);
 		position: sticky;
 		top: 0;
 		left: 0;
 		z-index: 10;
+
+		@media only screen and (min-width: 53.125em) {
+			padding: 2rem 1rem;
+		}
 	}
 
 	header > div {
@@ -60,15 +65,28 @@
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
+
+		@media only screen and (min-width: 43.75em) {
+			justify-content: initial;
+		}
 	}
 
 	.logo-container {
-		width: 17.7rem;
-		margin-right: 12.7rem;
+		width: 9rem;
+
+		@media only screen and (min-width: 25em) {
+			width: 17.7rem;
+		}
 	}
 
 	nav {
 		margin: 0 auto;
+		display: none;
+
+		@media only screen and (min-width: 43.75em) {
+			display: block;
+		}
 	}
 
 	ul {
@@ -92,14 +110,17 @@
 	}
 
 	.get-tickets-btn {
-		margin-left: 11.6rem;
 		border-radius: 2.4rem;
-		padding: 1rem 0.8rem;
+		padding: 0.6rem 0.8rem;
 		text-transform: capitalize;
 		background-color: var(--color-site);
-		width: 17.2rem;
+		width: 13.5rem;
 		color: inherit;
-		margin-left: auto;
 		text-align: center;
+
+		@media only screen and (min-width: 25em) {
+			width: 17.2rem;
+			padding: 1rem 0.8rem;
+		}
 	}
 </style>
