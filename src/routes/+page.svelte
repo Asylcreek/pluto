@@ -191,7 +191,7 @@
 	/* Hero section */
 	.hero-section {
 		width: 100%;
-		height: 174.6rem;
+		height: 100%;
 		position: relative;
 		isolation: isolate;
 		color: var(--color-white);
@@ -206,6 +206,10 @@
 			height: 100%;
 			background: linear-gradient(180deg, rgba(85, 14, 133, 0.63) 0%, rgba(73, 19, 187, 0.5) 100%);
 			z-index: -1;
+		}
+
+		@media only screen and (min-width: 50em) {
+			height: 174.6rem;
 		}
 	}
 
@@ -223,70 +227,152 @@
 	.hero-section-2 {
 		padding: 0 calc(var(--extra-width) / 2);
 		display: flex;
+		flex-direction: column;
 		align-items: flex-start;
 		justify-content: space-between;
+
+		@media only screen and (min-width: 50em) {
+			flex-direction: row;
+		}
 	}
 
 	.hero-section-1 {
-		padding-top: 20.5rem;
+		padding-top: 4.8rem;
 		gap: 14.5rem;
 
 		& > div:first-child {
-			max-width: 52.7rem;
+			width: 100%;
+
+			@media only screen and (min-width: 50em) {
+				max-width: 52.7rem;
+			}
 		}
 
 		& > div:last-child {
 			& :global(img) {
 				width: 43.8rem;
+				min-width: 29.8rem;
 				object-fit: cover;
+
+				@media only screen and (max-width: 50em) {
+					margin: 0 auto;
+					display: block;
+				}
+
+				@media only screen and (max-width: 31.25em) {
+					width: 29.8rem;
+				}
+
+				@media only screen and (max-width: 18.75em) {
+					width: 100%;
+					min-width: 100%;
+				}
 			}
+
+			@media only screen and (max-width: 50em) {
+				align-self: center;
+			}
+		}
+
+		@media only screen and (min-width: 53.125em) {
+			padding-top: 20.5rem;
+		}
+
+		@media only screen and (max-width: 72.5em) {
+			padding-left: 2.4rem;
+			padding-right: 2.4rem;
+		}
+
+		@media only screen and (max-width: 50em) {
+			gap: 5.6rem;
 		}
 	}
 
 	.hero-section-heading {
 		text-transform: uppercase;
 		font-weight: 700;
-		font-size: 4rem;
+		font-size: 2.4rem;
 		margin-bottom: 0.8rem;
+		text-wrap: balance;
 
 		& > span {
 			color: var(--color-site-a);
 		}
+
+		@media only screen and (min-width: 31.25em) {
+			font-size: 4rem;
+		}
 	}
 
 	.hero-section-text {
-		font-size: 2.4rem;
+		font-size: 1.5rem;
 		margin-bottom: 4rem;
+		text-wrap: balance;
+
+		@media only screen and (min-width: 31.25em) {
+			font-size: 2.4rem;
+		}
 	}
 
 	:global(.hero-section-button) {
-		width: 24rem;
+		width: 100%;
+
+		@media only screen and (min-width: 25em) {
+			width: 24rem;
+		}
+
+		@media only screen and (min-width: 31.25em) {
+			font-size: 1.6rem;
+		}
 	}
 
 	.hero-section-2 {
-		padding-top: 16.4rem;
+		padding-top: 8.5rem;
 		position: relative;
-		height: 84rem;
+		height: 100%;
 		margin-top: auto;
 
 		& > div:last-child {
-			width: 58.1rem;
-			margin-left: auto;
+			width: 100%;
+
+			@media only screen and (min-width: 50em) {
+				margin-left: auto;
+				max-width: 58.1rem;
+			}
 		}
 
 		& .hero-section-heading {
 			font-size: 3.2rem;
 		}
+
+		@media only screen and (min-width: 50em) {
+			padding-top: 16.4rem;
+			height: 84rem;
+		}
+
+		@media only screen and (max-width: 72.5em) {
+			padding-left: 2.4rem;
+			padding-right: 2.4rem;
+		}
 	}
 
 	.astronaut-2-container {
 		width: 30.6rem;
-		position: absolute;
-		bottom: 0;
-		margin-left: calc(var(--extra-width) / 2);
+		position: relative;
+		margin: 9.1rem auto 0;
 
 		& :global(img) {
 			width: 100%;
+		}
+
+		@media only screen and (min-width: 50em) {
+			position: absolute;
+			bottom: 0;
+			margin-left: calc(var(--extra-width) / 2);
+		}
+
+		@media only screen and (max-width: 31.25em) {
+			width: 20.3rem;
 		}
 	}
 
