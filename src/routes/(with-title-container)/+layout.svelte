@@ -28,7 +28,7 @@
 
 <style lang="scss">
 	.page-header-section {
-		height: 17.6rem;
+		height: 11rem;
 		position: relative;
 		isolation: isolate;
 		display: flex;
@@ -36,8 +36,13 @@
 		justify-content: center;
 		color: var(--color-white);
 		text-transform: uppercase;
-		font-size: 4rem;
+		font-size: 2.4rem;
 		font-weight: 700;
+
+		@media only screen and (min-width: 37.5em) {
+			font-size: 4rem;
+			height: 17.6rem;
+		}
 
 		&::after {
 			content: '';
@@ -66,22 +71,41 @@
 		}
 
 		& :global(picture .saucer) {
-			width: 32.3rem;
+			width: 8.2rem;
 			object-fit: cover;
 			position: absolute;
 			top: 50%;
-			left: 12.5rem;
+			left: 1.6rem;
 			transform: translateY(-50%);
 			z-index: -2;
+
+			@media only screen and (max-width: 18.75em) {
+				display: none;
+			}
+
+			@media only screen and (min-width: 37.5em) {
+				width: 20vw;
+				max-width: 32.3rem;
+				left: 1rem;
+			}
+
+			@media only screen and (min-width: 73.125em) {
+				left: calc(var(--extra-width) / 2);
+			}
 		}
 	}
 
 	.page-content-section {
 		width: 100%;
-		padding: 5rem calc(var(--extra-width) / 2) 10rem;
+		padding: 5rem 1.6rem 10rem;
 		position: relative;
 		isolation: isolate;
 		color: var(--color-white);
+
+		@media only screen and (min-width: 73.125em) {
+			padding-right: calc(var(--extra-width) / 2);
+			padding-left: calc(var(--extra-width) / 2);
+		}
 
 		&::after {
 			content: '';
