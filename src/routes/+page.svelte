@@ -6,6 +6,7 @@
 	import '$lib/styles/form.css';
 
 	import Button from '$lib/components/button.svelte';
+	import HomepageTickets from '$lib/components/homepage-tickets.svelte';
 
 	import removeImgBgOnLoad from '$lib/utils/removeImgBgOnLoad';
 
@@ -184,7 +185,9 @@
 			</p>
 		</div>
 
-		<div></div>
+		<div>
+			<HomepageTickets />
+		</div>
 	</section>
 </section>
 
@@ -506,7 +509,7 @@
 
 	/* sponsored-by section */
 	.sponsored-by-section {
-		padding: 6.5rem calc(var(--extra-width) / 2) 15rem;
+		padding: 6.5rem 0 15rem;
 		position: relative;
 		isolation: isolate;
 		color: var(--color-white);
@@ -539,6 +542,7 @@
 		top: 0;
 		left: 0;
 		z-index: -2;
+		width: 100%;
 	}
 
 	.sponsored-logos {
@@ -575,6 +579,7 @@
 		align-items: center;
 		gap: 10.8rem;
 		margin-top: 13.1rem;
+		padding: 0 calc(var(--extra-width) / 2);
 
 		& > div:last-child {
 			margin-left: auto;
@@ -587,17 +592,25 @@
 	}
 
 	.sponsored-by-section-2 {
+		--padding-left: calc(var(--extra-width) / 2);
+
 		display: flex;
 		align-items: center;
 		gap: 8.2rem;
 		margin-top: 13.1rem;
+		padding-left: var(--padding-left);
 
 		& > div:first-child {
 			max-width: 58.1rem;
+			flex-shrink: 0;
 
 			& .hero-section-heading {
 				font-size: 3.2rem;
 			}
+		}
+
+		& > div:last-child {
+			max-width: calc(100% - 58.1rem - 8.2rem);
 		}
 	}
 
