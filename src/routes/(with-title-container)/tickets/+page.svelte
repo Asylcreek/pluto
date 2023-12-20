@@ -98,7 +98,7 @@
 		{
 			name: 'Vector energy concert',
 			amount: 10000,
-			link: 'https://google.com',
+			link: 'https://events.nairabox.com/event/6581e61bd57fd656ec4eca7b',
 			location: '2nd January, 2024',
 			src: vectorEnergy
 		}
