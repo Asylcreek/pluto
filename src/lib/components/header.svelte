@@ -109,7 +109,7 @@
 		}
 	}
 
-	.get-tickets-btn {
+	:global(.get-tickets-btn) {
 		border-radius: 2.4rem;
 		padding: 0.6rem 0.8rem;
 		text-transform: capitalize;
