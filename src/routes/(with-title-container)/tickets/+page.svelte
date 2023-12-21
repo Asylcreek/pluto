@@ -68,16 +68,16 @@
 			src: christmasCarol
 		},
 		{
-			name: 'Influencers rave',
+			name: 'Influence concert',
 			amount: 10000,
-			link: 'https://google.com',
+			link: 'https://www.event.landmarkbeach.ng/ticket/influence-concert1702635850',
 			location: '26th December, 2023',
 			src: influencersRave
 		},
 		{
 			name: 'Gen Z fest',
 			amount: 10000,
-			link: 'https://google.com',
+			link: 'https://www.event.landmarkbeach.ng/ticket/gen-z-fest1702561680',
 			location: '30th December, 2023',
 			src: genZFest
 		},
@@ -98,7 +98,7 @@
 		{
 			name: 'Vector energy concert',
 			amount: 10000,
-			link: 'https://events.nairabox.com/event/6581e61bd57fd656ec4eca7b',
+			link: 'https://www.event.landmarkbeach.ng/ticket/teslim-the-energy-concert1702923378',
 			location: '2nd January, 2024',
 			src: vectorEnergy
 		}
