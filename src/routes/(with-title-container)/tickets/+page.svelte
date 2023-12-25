@@ -56,7 +56,7 @@
 		{
 			name: 'King of court (DJ Tunez v DJ Obi)',
 			amount: 10000,
-			link: 'https://google.com',
+			link: 'https://events.nairabox.com/event/6584fb44d57fd656ec4ecb68',
 			location: '24th December, 2023',
 			src: kingOfCourt
 		},
