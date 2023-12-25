@@ -54,7 +54,7 @@
 			</p>
 		</div>
 
-		<p class="icon-and-text">
+		<p class="icon-and-text ticket-price">
 			<span>{formatCurrency(amount)}</span>
 		</p>
 	</div>
@@ -114,6 +114,10 @@
 			fill: var(--color-site-d);
 			margin-right: 0.8rem;
 		}
+	}
+
+	.ticket-price {
+		color: var(--color-white);
 	}
 
 	.ticket-button {
