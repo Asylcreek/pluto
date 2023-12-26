@@ -5,8 +5,8 @@
 	import vipTickets from '$lib/assets/images/vip-tickets.png?as=run';
 	import regularTicket from '$lib/assets/images/regular-ticket.png?as=run';
 	import remaFansParty from '$lib/assets/images/rema-fans-party.png?as=run';
-	import djTunezAndFriend from '$lib/assets/images/dj-tunez-and-friends.png?as=run';
-	import kingOfCourt from '$lib/assets/images/king-of-court.png?as=run';
+	// import djTunezAndFriend from '$lib/assets/images/dj-tunez-and-friends.png?as=run';
+	// import kingOfCourt from '$lib/assets/images/king-of-court.png?as=run';
 	import christmasCarol from '$lib/assets/images/christmas-carol.png?as=run';
 	import influencersRave from '$lib/assets/images/influencers-rave.png?as=run';
 	import genZFest from '$lib/assets/images/gen-z-fest.png?as=run';
@@ -46,20 +46,20 @@
 			location: '19th December, 2023',
 			src: remaFansParty
 		},
-		{
-			name: 'DJ Tunez and friends',
-			amount: 10000,
-			link: 'https://google.com',
-			location: '21st December, 2023',
-			src: djTunezAndFriend
-		},
-		{
-			name: 'King of court (DJ Tunez v DJ Obi)',
-			amount: 10000,
-			link: 'https://events.nairabox.com/event/6584fb44d57fd656ec4ecb68',
-			location: '24th December, 2023',
-			src: kingOfCourt
-		},
+		// {
+		// 	name: 'DJ Tunez and friends',
+		// 	amount: 10000,
+		// 	link: 'https://google.com',
+		// 	location: '21st December, 2023',
+		// 	src: djTunezAndFriend
+		// },
+		// {
+		// 	name: 'King of court (DJ Tunez v DJ Obi)',
+		// 	amount: 10000,
+		// 	link: 'https://events.nairabox.com/event/6584fb44d57fd656ec4ecb68',
+		// 	location: '24th December, 2023',
+		// 	src: kingOfCourt
+		// },
 		{
 			name: 'Christmas carol',
 			amount: 10000,
